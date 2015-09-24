@@ -10,6 +10,7 @@ DoOrDont.controller('AnswersCtrl', function AnswersCtrl($scope, $stateParams, Ad
                                     rating: 0,
                                     upvote: 0});
       $scope.answer = null;
+      $scope.question.answered = true;
     } else {
       alert("answer already given");
     }

@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-md-12'>
-    <h3>Ask your question!</h3>
+    <h1>Ask your question!</h1>
     <form ng-submit='AdviceFactory.addQuestion()'  role='form'>
       <div class='form-group'>
         <input type="text" ng-model="AdviceFactory.question" class='form-control' placeholder='Enter Your Question Here'>
@@ -11,13 +11,23 @@
 </div>
 
 <div class='row'>
-  <div class="col-md-12" ng-show="questions.length">
+  <div class="col-md-6" ng-show="questions.length">
     <h3>Asked Questions:</h3>
     <form class="form-inline" role="form">
       <input ng-model="query" type="text" class="form-control" placeholder="search">
     </form>
-    <ul>
+    <!-- <ul>
       <li ng-repeat='item in filtered = (questions | filter:query)'><a ui-sref='question({ questionId: item.id})'>{{item.text}}</a><span class='number-of-answers' ng-show="item.answers.length">({{item.answers.length}}) answers</span></li>
+    </ul> -->
+  </div>
+  <div ng-show='questions.length' class='col-md-6'>
+    <h2>Answered questions</h2>
+    <ul>
+      <li ng-repeat='item in filtered = (questions | filter: query | filter: {answers: []} )'><a ui-sref='question({ questionId: item.id})'>{{item.text}}</a><span class='number-of-answers' ng-show="item.answers.length">({{item.answers.length}}) answers</span></li>
+    </ul>
+    <h2>Unanswered questions</h2>
+    <ul>
+      <li ng-repeat='item in filtered = (questions | filter: query | filter: {answered: false})'><a ui-sref='question({ questionId: item.id})'>{{item.text}}</a><span class='number-of-answers' ng-show="item.answers.length">({{item.answers.length}}) answers</span></li>
     </ul>
   </div>
 </div>

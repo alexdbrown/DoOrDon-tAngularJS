@@ -9,6 +9,10 @@
   background-color: Chartreuse;
 }
 
+.or {
+  margin-top: 50px;
+}
+
 .icon {
     height: 15px;
     width: 15px;
@@ -44,12 +48,12 @@ body {
   background-color: #5A0909;
 }
 
-h3 {
+h3, h1 {
   font-family: "PT Sans";
 }
 
 .jumbotron {
-  background-color: transparent;
+  background-color: #1E1E22;
   height: auto;
   -webkit-box-shadow: 20px 20px 42px -4px #000;
   -moz-box-shadow: 20px 20px 42px -4px #000;
@@ -77,19 +81,4 @@ input[type='text']:focus {
 .btn-black:hover {
   background-color: #fff;
   color: #000;
-}
-
-video#bgvid {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
-    background: repeat;
 }

@@ -4,7 +4,8 @@ DoOrDont.factory('AdviceFactory', function AdviceFactory(){
   factory.addQuestion = function () {
     factory.questions.push({ text: factory.question,
                              id: factory.questions.length + 1,
-                             answers: []});
+                             answers: [],
+                             answered: false});
     factory.question = null;
   };
 
