@@ -13,3 +13,30 @@
     height: 15px;
     width: 15px;
 }
+
+img:hover {
+  background-color: red;
+}
+
+.navbar {
+    background: linear-gradient(to right, #B7B6C1, #B7B6C1);
+    text-shadow: 2px 2px 2px #ffffff;
+    border-color: transparent;
+    border-width: 0px;
+}
+
+.navbar-brand {
+    padding: 5px 10px 5px 10px;
+    font-family: "Montserrat";
+    font-size: 20px;
+
+}
+
+#question-logo {
+  height: 20px;
+  width: 20px;
+}
+
+/*body {
+  background-color: 6F8695;
+}*/

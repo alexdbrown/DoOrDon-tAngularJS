@@ -13,10 +13,10 @@
           <button class="btn btn-default btn-sm" type="submit">Save</button>
         </form>
       </span>
-      <span ng-show="item.approved && !editing">APPROVED!</span>
+      <span ng-show="item.approved && !editing"><img class="icon" src="img/approved.png"</span>
       <strong ng-show='item.rating && !editing'>{{item.rating}}</strong>
-      <span ng-show="!editing" ng-click="addUpVote(item.id)"><img class="icon" src="img/up.png">{{item.upvote}}</span>
-        <span ng-show="!editing" ng-click="addDownVote(item.id)"><img class="icon" src="img/down.png"></span>
+      <span ng-show="!editing" ng-click="addUpVote(item.id)"><img class="icon" src="img/up.png"></span>
+        <span ng-show="!editing" ng-click="addDownVote(item.id)"><img class="icon" src="img/down.png">   {{item.upvote}}</span>
     </li>
   </ul>
   <form ng-submit='addAnswer()' role='form'>
