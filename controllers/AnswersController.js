@@ -16,5 +16,13 @@ DoOrDont.controller('AnswersCtrl', function AnswersCtrl($scope, $stateParams, Ad
 
   };
 
+  $scope.addUpVote = function(id) {
+    $scope.question.answers[id-1].upvote += 1;
+  }
+
+  $scope.addDownVote = function(id) {
+    $scope.question.answers[id-1].upvote -= 1;
+  }
+
 
 });

@@ -15,7 +15,8 @@
       </span>
       <span ng-show="item.approved && !editing">APPROVED!</span>
       <strong ng-show='item.rating && !editing'>{{item.rating}}</strong>
-      <span on-click="item.upvote++"><img class="icon" src="img/up.png"><img class="icon" src="img/down.png"></span>
+      <span ng-show="!editing" ng-click="addUpVote(item.id)"><img class="icon" src="img/up.png">{{item.upvote}}</span>
+        <span ng-show="!editing" ng-click="addDownVote(item.id)"><img class="icon" src="img/down.png"></span>
     </li>
   </ul>
   <form ng-submit='addAnswer()' role='form'>
