@@ -27,7 +27,7 @@ img:hover {
 
 .navbar-brand {
     padding: 5px 10px 5px 10px;
-    font-family: "Montserrat";
+    font-family: "PT Sans";
     font-size: 20px;
 
 }
@@ -37,6 +37,11 @@ img:hover {
   width: 20px;
 }
 
-/*body {
-  background-color: 6F8695;
-}*/
+
+body {
+  font-family: "PT Sans Narrow";
+}
+
+h3 {
+  font-family: "PT Sans";
+}

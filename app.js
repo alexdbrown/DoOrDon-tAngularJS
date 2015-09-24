@@ -13,7 +13,7 @@ DoOrDont.config(function($stateProvider, $urlRouterProvider){
   });
 
   $stateProvider.state('question', {
-    url: '/:questionId',
+    url: ':questionId',
     templateUrl: 'partials/question.html',
     controller: 'AnswersCtrl'
   });
