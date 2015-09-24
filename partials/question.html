@@ -2,10 +2,27 @@
   <h2>{{question.text}}</h2>
   <h3>Answers</h3>
   <ul>
-    <li ng-repeat='item in question.answers'>{{item.text}} <strong ng-show='item.rating'>{{item.rating}}</strong>
-      <input ng-model='rating' ng-show='formShow' type="number" min='1' max='5' value="1">
-      <button class='btn btn-xs' ng-click="submitRating(item.id, rating)" ng-show='formShow'>Submit</button>
-    <button class='btn btn-xs' ng-click='addRating(item.id)' ng-show='!item.approved'>Approve</button></li>
+    <li ng-repeat='item in question.answers'>
+
+
+      <span ng-click="editing = true">
+        {{item.text}}
+      </span>
+      <span class="form-group" ng-show="editing" ng-submit="editing=false">
+        <form class="form-inline" role="form">
+          <input class='form-control' ng-model='item.rating' type="number" min='1' max='5' value="1">
+          <input class='form-control' ng-model='item.approved' type="checkbox">Approved
+          <button class="btn btn-default btn-sm" type="submit">Save</button>
+        </form>
+      </span>
+
+
+
+
+
+      <span ng-show="item.approved && !editing">APPROVED!</span>
+       <strong ng-show='item.rating && !editing'>{{item.rating}}</strong>
+</li>
   </ul>
   <form ng-submit='addAnswer()' role='form'>
     <div class='form-group'>

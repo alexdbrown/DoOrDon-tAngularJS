@@ -16,15 +16,5 @@ DoOrDont.controller('AnswersCtrl', function AnswersCtrl($scope, $stateParams, Ad
 
   };
 
-  $scope.addRating = function(id) {
-    $scope.question.answers[id-1].approved = true;
-    $scope.formShow = true;
-
-  }
-
-  $scope.submitRating = function(id, rating) {
-    $scope.formShow = false;
-    $scope.question.answers[id-1].rating = rating
-  }
 
 });

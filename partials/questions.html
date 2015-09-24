@@ -14,7 +14,7 @@
     <input ng-model="query" type="text" class="form-control" placeholder="search">
   </form>
   <ul>
-    <li ng-repeat='item in filtered = (questions | filter:query)'><a ui-sref='question({ questionId: item.id})'>{{item.text}}</a><span ng-show="item.answers.length">({{item.answers.length}}) answers</span></li>
+    <li ng-repeat='item in filtered = (questions | filter:query)'><a ui-sref='question({ questionId: item.id})'>{{item.text}}</a><span class='number-of-answers' ng-show="item.answers.length">({{item.answers.length}}) answers</span></li>
   </ul>
 </div>
 
